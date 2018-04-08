@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <%# header.ejsの読み込み%>
+  <link rel="stylesheet" href="/stylesheets/chat.css">
+  <body>
+    <h1><%= title %></h1>
+
+<!--
+    <label for='name'>名前</label>
+    <input id='name' type='text' name='text'/>
+    <label for='text'>内容</label>
+    <input id='text' type='text' name='text'/>
+    <input id='send' type='button' value='送信'/>
+
+    <%# メッセージを表示する%>
+    <ul id='messages'></ul>
+-->
+
+
+
+    <ul id="message"></ul>
+    <div id="controls">
+      <form action="">
+        <select name="channel" id="channel">
+          <option value="channel-a">Channel-A</option>
+          <option value="channel-b">Channel-B</option>
+        </select>
+        <input type="text" id="msj" placeholder="メッセージを入力してください...">
+        <input type="submit" id="btn" value="Enviar">
+      </form>
+    </div>
+
+
+
+    <%# socket.ioとchat.jsを読み込む%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='javascripts/chat.js'></script>
+  </body>
+</html>
